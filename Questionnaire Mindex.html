@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Présentation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#050b18,#081a3b,#0f2c66);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.container{
+    width:800px;
+    max-width:95%;
+    background:rgba(10,20,40,.9);
+    border:1px solid #2d6bff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 0 30px rgba(0,100,255,.4);
+}
+
+h1{
+    text-align:center;
+    color:#63b3ff;
+    margin-bottom:30px;
+}
+
+.question{
+    margin-bottom:25px;
+}
+
+.question h2{
+    font-size:18px;
+    margin-bottom:12px;
+    color:#7ec8ff;
+}
+
+.options{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.options label{
+    cursor:pointer;
+}
+
+.options input{
+    display:none;
+}
+
+.options span{
+    display:block;
+    padding:12px 20px;
+    border-radius:10px;
+    background:#15264d;
+    border:2px solid #2956b8;
+    transition:.3s;
+}
+
+.options input:checked + span{
+    background:#2f80ff;
+    color:white;
+    border-color:#6bb4ff;
+    box-shadow:0 0 15px #2f80ff;
+}
+
+textarea,
+input[type=text],
+input[type=date]{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#15264d;
+    color:white;
+    margin-top:10px;
+    outline:none;
+    border:2px solid #2956b8;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#2f80ff;
+    color:white;
+    font-size:18px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#57a3ff;
+    transform:scale(1.03);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📝 Présentation</h1>
+
+<form>
+
+<div class="question">
+<h2>Le plus important c'est de...</h2>
+
+<div class="options">
+<label>
+<input type="radio" name="important">
+<span>S'amuser</span>
+</label>
+
+<label>
+<input type="radio" name="important">
+<span>S'entraider</span>
+</label>
+
+<label>
+<input type="radio" name="important">
+<span>Progresser</span>
+</label>
+
+<label>
+<input type="radio" name="important">
+<span>Respecter tout le monde</span>
+</label>
+</div>
+
+</div>
+
+<div class="question">
+<h2>Qu'est-ce que je peux apporter ?</h2>
+
+<textarea placeholder="Écris ici..."></textarea>
+</div>
+
+<div class="question">
+
+<h2>Je suis plutôt...</h2>
+
+<div class="options">
+
+<label>
+<input type="radio" name="style">
+<span>🌾 Farmer</span>
+</label>
+
+<label>
+<input type="radio" name="style">
+<span>⛏️ Miner</span>
+</label>
+
+<label>
+<input type="radio" name="style">
+<span>🗺️ Aventurier</span>
+</label>
+
+</div>
+
+</div>
+
+<div class="question">
+
+<h2>Quelle est la date de mon anniversaire ?</h2>
+
+<input type="date">
+
+</div>
+
+<div class="question">
+
+<h2>Je me présente...</h2>
+
+<textarea placeholder="Parle un peu de toi..."></textarea>
+
+</div>
+
+<button type="submit">Envoyer</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
